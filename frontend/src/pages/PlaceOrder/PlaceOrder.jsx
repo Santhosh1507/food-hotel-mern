@@ -62,6 +62,7 @@ const PlaceOrder = () => {
 
 
 
+
   // const handleOrderClick = () => {
   //   // Check if any required field is empty
   //   const requiredFields = ["firstName", "lastName", "email", "street", "city", "state", "zipCode", "country", "phone"];
@@ -82,6 +83,10 @@ const PlaceOrder = () => {
   //   }, 3000)
   // }, 5000);
   // };
+  
+
+
+
 
   return (
     <form className="place-order" onSubmit={placeOrder}>
