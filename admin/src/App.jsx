@@ -12,7 +12,7 @@ import Editfood from './pages/Editfood.jsx/Editfood'
 
 function App() {
 
-  const url = "http://localhost:3000"
+  const url = "https://food-hotel-mern-backend.onrender.com"
 
   return (
     <div>
