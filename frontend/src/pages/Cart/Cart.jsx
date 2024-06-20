@@ -13,7 +13,7 @@ const Cart = () => {
     setIsOrdering(true);
     if (getTotalCartAmount() === 0) {
       setTimeout(() => {
-        alert("Please select items search.");
+        alert("Please select items to proceed.");
         setIsOrdering(false);
         setTimeout(() => {
           navigate("/search");
@@ -39,12 +39,12 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item, index) => {
+        {food_list.map((item) => {
           if (cartItems[item._id] > 0) {
             return (
-              <div>
+              <div key={item._id}>
                 <div className="cart-items-title cart-items-item">
-                  <img src={url+"/images/"+item.image} alt="" />
+                  <img src={`${url}/images/${item.image}`} alt={item.name} />
                   <p>{item.name}</p>
                   <p>₹{item.price}</p>
                   <p className="para-items">
@@ -52,14 +52,14 @@ const Cart = () => {
                       className="image-icon"
                       onClick={() => removeFromCart(item._id)}
                       src={assets.remove_icon_red}
-                      alt=""
+                      alt="Remove"
                     />
                     {cartItems[item._id]}
                     <img
                       className="image-icon1"
                       onClick={() => addToCart(item._id)}
                       src={assets.add_icon_white}
-                      alt=""
+                      alt="Add"
                     />
                   </p>
                   <p>₹{item.price * cartItems[item._id]}</p>
@@ -69,6 +69,7 @@ const Cart = () => {
               </div>
             );
           }
+          return null;
         })}
       </div>
       <div className="cart-bottom">
@@ -91,7 +92,7 @@ const Cart = () => {
             </div>
           </div>
           <button onClick={proceedToCheckout} disabled={isOrdering}>
-            {isOrdering ? 'Process...' : 'PROCEED TO CHECKOUT'}
+            {isOrdering ? 'Processing...' : 'PROCEED TO CHECKOUT'}
           </button>
         </div>
         <div className="cart-promocode">
