@@ -30,7 +30,7 @@ Install my-project/frontend with npm
 ```bash
   npm run dev
 ```
-5. frontend project
+5. admin project
 ```bash
   cd .\food-hotel\admin\
 ```
