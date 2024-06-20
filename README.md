@@ -6,7 +6,7 @@ I'm craete My Food Hotel
 
 url: https://food-hotel-mern-frontend.vercel.app/
 
-## 🔗 Demo Frontend project
+## 🔗 Demo admin project
 
 url: https://food-hotel-mern-admin.vercel.app/
 
